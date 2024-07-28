@@ -13,8 +13,5 @@ import { Product } from '../produit/produit.component';
 export class DetailproduitComponent {
   @Input() product: Product | null = null;
 
-  selectedProduct: Product | null = null;
-  closeDetails(): void {
-    this.selectedProduct = null;
-  }
+ 
 }

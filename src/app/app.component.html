@@ -1,6 +1,22 @@
 <!-- app.component.html -->
 <div class="container">
-  <h1 class="text-center">{{ title }}</h1>
   <app-produit (productSelected)="selectProduct($event)"></app-produit>
-  <app-detailproduit *ngIf="selectedProduct" [product]="selectedProduct"></app-detailproduit>
+
+  <!-- Modal for Product Details -->
+  <div *ngIf="selectedProduct" class="modal show" tabindex="-1" role="dialog" style="display: block;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Détails du produit</h5>
+          <button type="button" class="btn-close" (click)="closeDetails()" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-detailproduit [product]="selectedProduct"></app-detailproduit>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="closeDetails()">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -2,7 +2,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-// import { DetailproduitComponent } from '../detailproduit/detailproduit.component';
 
 export interface Product {
   id: number;
@@ -33,10 +32,5 @@ export class ProduitComponent {
 
   onSelectProduct(product: Product): void {
     this.productSelected.emit(product);
-  }
-  
-  selectedProduct: Product | null = null;
-  closeDetails(): void {
-    this.selectedProduct = null;
   }
 }

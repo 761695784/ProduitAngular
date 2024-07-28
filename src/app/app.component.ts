@@ -16,10 +16,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'MalcomAngular';
   selectedProduct: Product | null = null;
 
   selectProduct(product: Product): void {
     this.selectedProduct = product;
+  }
+
+  closeDetails(): void {
+    this.selectedProduct = null;
   }
 }

@@ -2,35 +2,14 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 offset-md-3">
-      <h1 class="text-center">Détails du produit</h1>
       <div class="card">
         <img src="{{ product?.imageUrl }}" class="card-img-top" alt="{{ product?.title }}">
         <div class="card-body">
           <h5 class="card-title">{{ product?.title }}</h5>
           <p class="card-text">{{ product?.description }}</p>
-          <p class="card-text">Prix : {{ product?.price | currency:'EUR':'symbol':'1.2-2' }} </p>
+          <p class="card-text">Prix : {{ product?.price | currency:'EUR':'symbol':'1.2-2' }}</p>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<!-- Pop-up Modale pour les détails du produit -->
-<!-- <div *ngIf="selectedProduct" class="modal show" tabindex="-1" style="display: block;" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">{{ selectedProduct.title }}</h5>
-        <button type="button" class="btn-close" aria-label="Close" (click)="closeDetails()"></button>
-      </div>
-      <div class="modal-body">
-        <img [src]="selectedProduct.imageUrl" class="img-fluid" alt="{{ selectedProduct.title }}" style="max-width: 100%;">
-        <p><strong>Description:</strong> {{ selectedProduct.description }}</p>
-        <p><strong>Prix:</strong> {{ selectedProduct.price | currency:'EUR':'symbol':'1.2-2' }} €</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" (click)="closeDetails()">Fermer</button>
-      </div>
-    </div>
-  </div>
-</div> -->

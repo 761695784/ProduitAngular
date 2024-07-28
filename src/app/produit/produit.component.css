@@ -1,0 +1,41 @@
+.card-deck {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.card {
+  width: 20rem; /* Fixer une largeur pour les cartes */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  margin: 10px;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.card-body {
+  padding: 20px;
+}
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+.card-text {
+  font-size: 18px;
+  color: #666;
+}
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 10px;
+
+}
+.card-img-top {
+  width: 100%; /* Assurer que l'image ne déborde pas de la carte */
+  height: 200px; /* Fixer une hauteur pour les images */
+  object-fit: cover; /* Couper les images pour qu'elles remplissent la zone */
+  border-top-left-radius: 10px; /* Ajuster les coins arrondis pour correspondre à la carte */
+  border-top-right-radius: 10px; /* Ajuster les coins arrondis pour correspondre à la carte */
+}
